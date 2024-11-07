@@ -4,6 +4,8 @@
 
 This project is created to provide admins with an overview of their resource's bookings.
 
+Link to project: [Resource Management Calendar](https://672c6fc6341e900008e56029--resource-management-1542.netlify.app/)
+
 Here are some features which resource mamangement calendar are able to do:
 
 - View bookings in calendar format. Bookings can be viewed in either list view or table view. You can also toggle between monthly, weekly, and daily views for the bookings.
