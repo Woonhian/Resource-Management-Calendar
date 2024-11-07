@@ -2,7 +2,7 @@
 
 ## About The Project
 
-This project is created to provide admins with an overview of their resource's bookings
+This project is created to provide admins with an overview of their resource's bookings.
 
 Here are some features which resource mamangement calendar are able to do:
 
