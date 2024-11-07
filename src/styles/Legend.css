@@ -1,0 +1,130 @@
+.legend {
+  flex: 1 1 200px;
+  min-width: 200px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.legend h3 {
+  margin-bottom: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.conference-room {
+  border-color: #34a853;
+}
+
+.conference-room:checked {
+  background-color: #34a853;
+  border-color: #34a853;
+}
+
+.meeting-room {
+  border-color: #fbbc05;
+}
+
+.meeting-room:checked {
+  background-color: #fbbc05;
+  border-color: #fbbc05;
+}
+
+.discussion-room {
+  border-color: #4285f4;
+}
+
+.discussion-room:checked {
+  background-color: #4285f4;
+  border-color: #4285f4;
+}
+
+@media (max-width: 768px) {
+  .legend {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 10px;
+  }
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between checkbox and text */
+}
+
+/* Base styles for circular checkboxes */
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+  appearance: none; /* Remove default checkbox styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #999;
+  border-radius: 6px;
+  position: relative;
+  display: inline-block;
+  background-color: transparent; /* Default background color when not checked */
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cancelled Checkbox: Red */
+.custom-checkbox-cancelled {
+  border-color: #c62828; /* Red border when not checked */
+}
+
+.custom-checkbox-cancelled:checked {
+  background-color: #c62828; /* Solid red when checked */
+  border-color: #c62828;
+}
+
+/* Confirmed Checkbox: Green */
+.custom-checkbox-confirmed {
+  border-color: #4caf50; /* Green border when not checked */
+}
+
+.custom-checkbox-confirmed:checked {
+  background-color: #4caf50; /* Solid green when checked */
+  border-color: #4caf50;
+}
+
+.custom-checkbox-itcd {
+  border-color: #ff69b4;
+}
+
+.custom-checkbox-itcd:checked {
+  background-color: #ff69b4;
+  border-color: #ff69b4;
+}
+
+.custom-checkbox-colab {
+  border-color: #8a2be2;
+}
+
+.custom-checkbox-colab:checked {
+  background-color: #8a2be2;
+  border-color: #8a2be2;
+}
+
+/* General style for the tick mark */
+.custom-checkbox:checked::after {
+  content: "✔"; /* Tick mark */
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

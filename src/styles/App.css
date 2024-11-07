@@ -1,0 +1,84 @@
+.calendar-container {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.date-container {
+  margin: 20px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Set max-width to allow it to scale */
+  width: 100%; /* Make it take up full width of the container */
+  padding: 0 10px; /* Optional padding for better spacing */
+  box-sizing: border-box;
+}
+
+/* App.css or MonthlyCalendar.css */
+.fc-timegrid-event,
+.fc-daygrid-event {
+  padding: 5px;
+  font-size: 0.9em;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflowed text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+.fc-timegrid-event .fc-event-time,
+.fc-daygrid-event .fc-event-time {
+  font-size: 0.9em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc-timegrid-event .fc-event-title,
+.fc-daygrid-event .fc-event-title {
+  font-size: 1em;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc-timegrid-event .fc-event-status,
+.fc-daygrid-event .fc-event-status {
+  font-size: 0.85em;
+  margin-top: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc-col-header,
+.fc-scrollgrid-sync-table,
+.fc-daygrid-body.fc-daygrid-body-unbalanced.fc-daygrid-body-natural,
+.fc-daygrid-body.fc-daygrid-body-unbalanced,
+.fc-timegrid-body,
+.fc-timegrid-slots table,
+.fc-timegrid-cols table {
+  width: 100% !important;
+}
+
+.fc-event,          /* Month and Week views */
+.fc-timegrid-event, /* Day view */
+.fc-list-event {
+  /* List view */
+  cursor: pointer; /* Show click cursor on hover */
+}
+
+/* Optional: Smaller font for mobile */
+@media (max-width: 768px) {
+  .fc-event-time,
+  .fc-event-title {
+    font-size: 0.85em;
+  }
+}
