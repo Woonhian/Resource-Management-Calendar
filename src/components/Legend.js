@@ -1,6 +1,7 @@
 // Legend.js
 import React from "react";
 import "../styles/Legend.css";
+import LegendCheckbox from "./LegendCheckbox";
 
 const Legend = ({ selectedFilters, onToggle }) => {
   const handleToggle = (filterType) => {
@@ -14,73 +15,52 @@ const Legend = ({ selectedFilters, onToggle }) => {
   return (
     <div className="legend">
       <h3>Room Type</h3>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox conference-room"
-          checked={selectedFilters.conference}
-          onChange={() => handleToggle("conference")}
-        />
-        Conference Room
-      </label>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox meeting-room"
-          checked={selectedFilters.meeting}
-          onChange={() => handleToggle("meeting")}
-        />
-        Meeting Room
-      </label>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox discussion-room"
-          checked={selectedFilters.discussion}
-          onChange={() => handleToggle("discussion")}
-        />
-        Discussion Room
-      </label>
+      <LegendCheckbox
+        label="Conference Room"
+        checked={selectedFilters.conference}
+        onChange={() => handleToggle("conference")}
+        className="conference-room"
+      />
+      <LegendCheckbox
+        label="Meeting Room"
+        checked={selectedFilters.meeting}
+        onChange={() => handleToggle("meeting")}
+        className="meeting-room"
+      />
+      <LegendCheckbox
+        label="Discussion Room"
+        checked={selectedFilters.discussion}
+        onChange={() => handleToggle("discussion")}
+        className="discussion-room"
+      />
 
       <h3>Status</h3>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox custom-checkbox-confirmed"
-          checked={selectedFilters.confirmed}
-          onChange={() => handleToggle("confirmed")}
-        />
-        Confirmed
-      </label>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox custom-checkbox-cancelled"
-          checked={selectedFilters.cancelled}
-          onChange={() => handleToggle("cancelled")}
-        />
-        Cancelled
-      </label>
+      <LegendCheckbox
+        label="Confirmed"
+        checked={selectedFilters.confirmed}
+        onChange={() => handleToggle("confirmed")}
+        className="custom-checkbox-confirmed"
+      />
+      <LegendCheckbox
+        label="Cancelled"
+        checked={selectedFilters.cancelled}
+        onChange={() => handleToggle("cancelled")}
+        className="custom-checkbox-cancelled"
+      />
 
       <h3>Brand</h3>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox custom-checkbox-itcd"
-          checked={selectedFilters.itcd}
-          onChange={() => handleToggle("itcd")}
-        />
-        ITCD
-      </label>
-      <label className="legend-item">
-        <input
-          type="checkbox"
-          className="custom-checkbox custom-checkbox-colab"
-          checked={selectedFilters.colab}
-          onChange={() => handleToggle("colab")}
-        />
-        CoLab
-      </label>
+      <LegendCheckbox
+        label="ITCD"
+        checked={selectedFilters.itcd}
+        onChange={() => handleToggle("itcd")}
+        className="custom-checkbox-itcd"
+      />
+      <LegendCheckbox
+        label="CoLab"
+        checked={selectedFilters.colab}
+        onChange={() => handleToggle("colab")}
+        className="custom-checkbox-colab"
+      />
     </div>
   );
 };
