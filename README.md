@@ -4,7 +4,7 @@
 
 This project is created to provide admins with an overview of their resource's bookings.
 
-Link to project: [Resource Management Calendar](https://672c6fc6341e900008e56029--resource-management-1542.netlify.app/)
+Link to project: [Resource Management Calendar](https://resource-management-1542.netlify.app/)
 
 Here are some features which resource mamangement calendar are able to do:
 
