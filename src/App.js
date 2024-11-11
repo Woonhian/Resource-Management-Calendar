@@ -111,6 +111,9 @@ function App() {
               ></path>
             </svg>
           </button>
+          <div className="navbar_logo">
+            <img src="calender_logo.png" alt="calendar-logo" />
+          </div>
           <h1 className="calendar-title">Resource Management Calendar</h1>
         </div>
       </nav>
@@ -121,13 +124,14 @@ function App() {
         )}
 
         <div className={`sidebar ${isSidebarVisible ? "show" : ""}`}>
-          <div>
+          <div className="date-container">
             <h3>Select Date</h3>
             <DatePicker
               selected={selectedDate}
               onChange={handleDateChange} // Function to updated selected date
               showMonthYearPicker // Enables month and year selection only
               dateFormat="MMMM yyyy" // Display format for month and year
+              inline
             />
           </div>
           {/* Pass the selected filters and toggle handler to Legend */}
