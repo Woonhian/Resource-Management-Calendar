@@ -99,7 +99,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Resource Management Calendar</h1>
+      <h1 className="calendar-title">Resource Management Calendar</h1>
       <div className="calendar-container">
         <button className="hamburger-icon" onClick={toggleSidebar}>
           <FaBars />
