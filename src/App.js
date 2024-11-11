@@ -5,6 +5,7 @@ import MonthlyCalendar from "./components/MonthlyCalendar";
 import Legend from "./components/Legend";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { FaBars } from "react-icons/fa";
 
 function App() {
   // State to store bookings datas parsed from CSV file
@@ -24,6 +25,8 @@ function App() {
   // State for selected date
   const [selectedDate, setSelectedDate] = useState(new Date());
 
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
+
   // Handle room type, status and brand toggle from Legend
   const handleFilterToggle = (updatedSelection) => {
     setSelectedFilters(updatedSelection);
@@ -32,6 +35,15 @@ function App() {
   // Handle selected date from date picker
   const handleDateChange = (date) => {
     setSelectedDate(date); // Update the selected date
+  };
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
+
+  const closeSidebar = () => {
+    setSidebarVisible(false);
   };
 
   // Load CSV data from files
@@ -89,8 +101,16 @@ function App() {
     <div className="App">
       <h1>Resource Management Calendar</h1>
       <div className="calendar-container">
-        <div>
-          <div className="date-container">
+        <button className="hamburger-icon" onClick={toggleSidebar}>
+          <FaBars />
+        </button>
+
+        {isSidebarVisible && (
+          <div className="sidebar-overlay" onClick={closeSidebar}></div>
+        )}
+
+        <div className={`sidebar ${isSidebarVisible ? "show" : ""}`}>
+          <div>
             <h3>Select Date</h3>
             <DatePicker
               selected={selectedDate}
