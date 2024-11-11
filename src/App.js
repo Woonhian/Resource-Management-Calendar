@@ -5,7 +5,6 @@ import MonthlyCalendar from "./components/MonthlyCalendar";
 import Legend from "./components/Legend";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { FaBars } from "react-icons/fa";
 
 function App() {
   // State to store bookings datas parsed from CSV file
@@ -99,12 +98,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="calendar-title">Resource Management Calendar</h1>
-      <div className="calendar-container">
-        <button className="hamburger-icon" onClick={toggleSidebar}>
-          <FaBars />
-        </button>
+      <nav className="navbar">
+        <div className="navbar-content">
+          <button className="hamburger-icon" onClick={toggleSidebar}>
+            <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="2"
+                d="M4 7h22M4 15h22M4 23h22"
+              ></path>
+            </svg>
+          </button>
+          <h1 className="calendar-title">Resource Management Calendar</h1>
+        </div>
+      </nav>
 
+      <div className="calendar-container">
         {isSidebarVisible && (
           <div className="sidebar-overlay" onClick={closeSidebar}></div>
         )}
