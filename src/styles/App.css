@@ -1,6 +1,5 @@
 .calendar-container {
   display: flex;
-  flex: 1;
   align-items: flex-start;
   column-gap: 10px;
   overflow-y: auto;
@@ -8,12 +7,19 @@
 }
 
 .date-container {
-  width: 250px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .sidebar {
-  width: 250px;
   transition: transform 0.3s ease; /* Smooth slide-in effect */
+}
+
+.react-datepicker__month-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .App {
