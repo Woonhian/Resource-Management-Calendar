@@ -141,11 +141,15 @@ function App() {
           />
         </div>
 
-        <MonthlyCalendar
-          events={events}
-          selectedFilters={selectedFilters}
-          selectedDate={selectedDate}
-        />
+        <div className="fullcalendar-main-container">
+          <div className="fullcalendar-inner-container">
+            <MonthlyCalendar
+              events={events}
+              selectedFilters={selectedFilters}
+              selectedDate={selectedDate}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

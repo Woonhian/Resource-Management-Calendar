@@ -2,8 +2,9 @@
   display: flex;
   align-items: flex-start;
   column-gap: 10px;
-  overflow-y: auto;
+  flex: 1;
   padding: 1rem;
+  width: 100%;
 }
 
 .date-container {
@@ -28,7 +29,7 @@
   align-items: center;
   max-width: 100%; /* Set max-width to allow it to scale */
   width: 100%; /* Make it take up full width of the container */
-  padding: 0 10px; /* Optional padding for better spacing */
+  padding: 0 20px;
   box-sizing: border-box;
   height: 100vh;
 }
@@ -131,7 +132,6 @@
 .navbar-content {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .navbar_logo {
@@ -144,6 +144,19 @@
 .navbar_logo img {
   width: 2rem;
   height: auto;
+}
+
+.fullcalendar-main-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.fullcalendar-inner-container {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 @media (max-width: 768px) {
